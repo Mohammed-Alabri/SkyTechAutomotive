@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="fixcar mechanic electric" />
+  <meta name="description" content="Best garage in Muscat!" />
+  <meta name="author" content="" />
+
+  <title>SkyTech Automotive</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <style>
+    #total {
+      font-weight: bold;
+    }
+
+    #invoice {
+      margin-top: 20px;
+    }
+
+    .invoice-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="header_top">
+        <div class="container-fluid">
+          <div class="contact_nav">
+            <a href="">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>
+                Call : +968 91111111
+              </span>
+            </a>
+            <a href="">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>
+                Email : sxxxxxx@student.squ.edu.om
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+              <span>
+                <img src="./images/logo.png" style="height: 50px;" alt="">
+              </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="schedule.html">schedule an appointment</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html"> About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="funpage.html">funpage</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="service.html">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Questionnairepage.html">Questionnaire page</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="bestworker.html">best worker</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="billCalculator.html">Bill Calculator</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </div>
+  <div style="padding-bottom: 1cm;" class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="mb-4">SkyTech Bill Calculator</h2>
+        <div id="servicesContainer"></div>
+        <div class="form-group">
+          <input type="checkbox" class="custom-control-input" id="studentDiscount">
+          
+        </div>
+        <button type="button" class="btn btn-primary" onclick="calculateTotal()">Calculate Total</button>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card mt-4" id="invoice">
+          <div class="card-body">
+            <h4 class="card-title">Invoice</h4>
+            <div id="invoiceItems"></div>
+            <div class="invoice-item">
+              <span>Date: <span id="invoiceDate"></span></span>
+            </div>
+            <div class="invoice-item">
+              <span>Garage Name: SkyTech Automative</span>
+            </div>
+            <div class="invoice-item">
+              <span>Total: <span id="total">0.000</span> OMR</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="container">
+      <h4>
+        Get In Touch
+      </h4>
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="info_items">
+            <div class="row">
+              <div class="col-md-4">
+                <a href="">
+                  <div class="item ">
+                    <div class="img-box ">
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <p>
+                      6Th alkhod, Al seeb, Muscat
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="">
+                  <div class="item ">
+                    <div class="img-box ">
+                      <i class="fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                    <p>
+                      +968 911111111
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="">
+                  <div class="item ">
+                    <div class="img-box">
+                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <p>
+                      s136382@student.squ.edu.om
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="social-box">
+      <h4>
+        Follow Us
+      </h4>
+      <div class="box">
+        <a href="">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </a>
+        <a href="">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="">
+          <i class="fa fa-youtube" aria-hidden="true"></i>
+        </a>
+        <a href="">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayDateYear"></span> SkyTech 2023 C
+        
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+
+
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    // Services data
+    const servicesData = [
+      { id: 'oilChange', name: 'Oil Change', price: 25, time: '1 hour' },
+      { id: 'tireRotation', name: 'Tire Rotation', price: 15, time: '30 minutes' },
+      { id: 'brakeService', name: 'Brake Service', price: 35, time: '2 hours' },
+      { id: 'airFilter', name: 'Air Filter Replacement', price: 20, time: '15 minutes' },
+      { id: 'batteryReplacement', name: 'Battery Replacement', price: 80, time: '1.5 hours' },
+      { id: 'engineTuneUp', name: 'Engine Tune-Up', price: 60, time: '1.5 hours' },
+      { id: 'transmissionFlush', name: 'Transmission Flush', price: 70, time: '1 hour' },
+      { id: 'wheelAlignment', name: 'Wheel Alignment', price: 25, time: '45 minutes' }
+    ];
+
+    // Function to create checkboxes dynamically
+    function createCheckboxes() {
+      const servicesContainer = document.getElementById('servicesContainer');
+
+      servicesData.forEach(service => {
+        const checkboxDiv = document.createElement('div');
+        checkboxDiv.classList.add('form-group');
+
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.classList.add('custom-control-input');
+        checkbox.id = service.id;
+        checkbox.name = 'services';
+        checkbox.value = service.price;
+
+        const label = document.createElement('label');
+        label.classList.add('custom-control-label');
+        label.setAttribute('for', service.id);
+        label.textContent = `${service.name} (${service.price.toFixed(3)} OMR) - ${service.time}`;
+
+        checkboxDiv.appendChild(checkbox);
+        checkboxDiv.appendChild(label);
+        servicesContainer.appendChild(checkboxDiv);
+      });
+
+      // Add student discount checkbox
+      const studentDiscountDiv = document.createElement('div');
+      studentDiscountDiv.classList.add('form-group');
+      const studentDiscountCheckbox = document.createElement('input');
+      studentDiscountCheckbox.type = 'checkbox';
+      studentDiscountCheckbox.classList.add('custom-control-input');
+      studentDiscountCheckbox.id = 'studentDiscount';
+      studentDiscountDiv.appendChild(studentDiscountCheckbox);
+      const studentDiscountLabel = document.createElement('label');
+      studentDiscountLabel.classList.add('custom-control-label');
+      studentDiscountLabel.setAttribute('for', 'studentDiscount');
+      studentDiscountLabel.textContent = 'Student Discount';
+      studentDiscountDiv.appendChild(studentDiscountLabel);
+      servicesContainer.appendChild(studentDiscountDiv);
+    }
+
+    // Function to calculate total and update invoice
+    function calculateTotal() {
+      const checkboxes = document.querySelectorAll('input[name="services"]:checked');
+      const studentDiscountCheckbox = document.getElementById('studentDiscount');
+      const hasStudentDiscount = studentDiscountCheckbox.checked;
+
+      let total = 0;
+      const invoiceItemsContainer = document.getElementById('invoiceItems');
+      invoiceItemsContainer.innerHTML = '';
+
+      checkboxes.forEach(checkbox => {
+        total += parseInt(checkbox.value);
+        // Add item to invoice
+        const selectedService = servicesData.find(service => service.id === checkbox.id);
+        const serviceName = `${selectedService.name} (${selectedService.time})`;
+        const invoiceItem = document.createElement('div');
+        invoiceItem.classList.add('invoice-item');
+        invoiceItem.innerHTML = `<span>${serviceName}</span><span>${selectedService.price.toFixed(3)} OMR</span>`;
+        invoiceItemsContainer.appendChild(invoiceItem);
+      });
+
+      // Apply student discount if selected
+      if (hasStudentDiscount) {
+        const discountPercentage = 10; // Adjust the discount percentage as needed
+        const discountAmount = (total * discountPercentage) / 100;
+        total -= discountAmount;
+        const discountItem = document.createElement('div');
+        discountItem.classList.add('invoice-item');
+        discountItem.innerHTML = `<span>Student Discount (${discountPercentage}%)</span><span>-${discountAmount.toFixed(3)} OMR</span>`;
+        invoiceItemsContainer.appendChild(discountItem);
+      }
+
+      // Update date and total
+      const invoiceDate = new Date().toLocaleString();
+      document.getElementById('invoiceDate').textContent = invoiceDate;
+      document.getElementById('total').textContent = total.toFixed(3);
+    }
+
+    // Initialize the checkboxes
+    createCheckboxes();
+  </script>
+
+</body>
+</html>
