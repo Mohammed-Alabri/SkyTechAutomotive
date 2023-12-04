@@ -25,6 +25,28 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  <style>
+    .moving-banner {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 30px;
+      background-color: rgb(0, 98, 255);
+      color: #fff;
+      text-align: center;
+      animation: slide 10s linear infinite;
+    }
+
+    /* Animation for moving banner */
+    @keyframes slide {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+  </style>
 
 </head>
 
@@ -259,8 +281,8 @@
               </div>
               <div class="client_text">
                 <p>
-                  chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum
-                </p>
+              very good Garage               
+              </p>
               </div>
             </div>
           </div>
@@ -286,7 +308,7 @@
               </div>
               <div class="client_text">
                 <p>
-                  chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum
+                  I like how they work
                 </p>
               </div>
             </div>
@@ -313,7 +335,7 @@
               </div>
               <div class="client_text">
                 <p>
-                  chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum
+                  best garage!
                 </p>
               </div>
             </div>
@@ -340,8 +362,8 @@
               </div>
               <div class="client_text">
                 <p>
-                  chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum
-                </p>
+                  ok!!
+                                </p>
               </div>
             </div>
           </div>
@@ -358,16 +380,13 @@
                     </h6>
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
                   </div>
                   <i class="fa fa-quote-left" aria-hidden="true"></i>
                 </div>
               </div>
               <div class="client_text">
                 <p>
-                  chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum
+                I dont like it.
                 </p>
               </div>
             </div>
@@ -403,7 +422,13 @@
   </section>
   
 
+  <div class="moving-banner" id="moving"></div>
 
+  <script>
+    // Add the banner to the page
+    let panner = document.getElementById("moving").innerHTML = "Welcome to the SkyTech website!" + new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString();
+
+  </script>
 
   <!-- info section -->
   <section class="info_section ">
